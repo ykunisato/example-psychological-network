@@ -1,0 +1,16 @@
+---
+title: "SHAPSの心理学的ネットワーク分析"
+author: "国里愛彦"
+date: "`r format(Sys.time(), '%Y/%m/%d')`"
+output:
+  html_document:
+    md_extensions: -ascii_identifiers
+    theme: cosmo
+    highlight: pygments
+    toc: true
+    toc_float:
+      collapse: false
+    df_print: "kable"
+---
+
+## はじめに

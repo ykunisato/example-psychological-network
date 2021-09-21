@@ -1,0 +1,9 @@
+cff-version: 1.0.0
+message: If you use this data and Rmd file, please cite it as below.
+authors:
+  - family-names: Kunisato
+    given-names: Yoshihiko
+title: Example of psychological network analysis
+version: 1.0.0
+date-released: 2021-09-21
+repository: https://github.com/ykunisato/psychological-network-shaps
