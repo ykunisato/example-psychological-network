@@ -1,6 +1,6 @@
 ## A example of psychological network of anhedonia
 
-[日本語/Japanese](README_jp.md)
+[日本語/Japanese](README_j.md)
 
 ### Author
 
