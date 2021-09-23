@@ -1,4 +1,4 @@
-## Example of psychological network analysis
+## A example of psychological network of anhedonia
 
 [日本語/Japanese](README_jp.md)
 
@@ -10,7 +10,7 @@ Yoshihiko Kunisato
 
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
-Please cite "Kunisato Y.(2021). Example of psychological network analysis (version 1.0.0). DOI: https://doi.org/10.5281/zenodo.5519884"
+Please cite "Kunisato Y.(2021). A example of psychological network of anhedonia (version 1.1.0). DOI: https://doi.org/10.5281/zenodo.5519884"
 
 ### DOI
 

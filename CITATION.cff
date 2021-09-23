@@ -4,6 +4,6 @@ authors:
   - family-names: Kunisato
     given-names: Yoshihiko
 title: Example of psychological network analysis
-version: 1.0.0
+version: 1.1.0
 date-released: 2021-09-21
 repository: https://github.com/ykunisato/psychological-network-shaps
