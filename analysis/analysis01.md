@@ -1,7 +1,7 @@
 ---
 title: "アンヘドニアの心理ネットワークの例"
 author: "国里愛彦"
-date: "`r format(Sys.time(), '%Y/%m/%d')`"
+date: "2021/09/23"
 output:
   html_document:
     toc: true
@@ -13,7 +13,8 @@ output:
 
 ## 使用パッケージ
 
-```{r message=FALSE, warning=FALSE}
+
+```r
 library(bootnet)
 library(qgraph)
 ```
@@ -22,9 +23,27 @@ library(qgraph)
 
 杣取・国里(2019)のデータの一部（SHAPS尺度の項目レベルデータ）を読み込みます。SHPASは，Snaith et al.(1995)が作成したアンヘドニアを測定する尺度であり，本データはその日本語版(Nagayama et al., 2012)への回答データである。
 
-```{r message=FALSE, warning=FALSE}
+
+```r
 data_shaps <- read.csv("../data/data.csv")
 head(data_shaps)
+```
+
+```
+##   shaps1 shaps2 shaps3 shaps4 shaps5 shaps6 shaps7 shaps8 shaps9 shaps10
+## 1      2      2      2      2      2      2      2      3      3       2
+## 2      2      1      1      1      2      2      1      2      1       1
+## 3      2      2      2      2      2      2      2      2      2       2
+## 4      2      2      2      2      1      1      2      2      2       2
+## 5      3      2      3      1      3      2      2      3      3       3
+## 6      1      1      1      1      1      1      1      2      2       1
+##   shaps11 shaps12 shaps13 shaps14
+## 1       2       2       2       2
+## 2       1       1       1       1
+## 3       2       2       2       2
+## 4       2       1       2       2
+## 5       2       3       2       2
+## 6       1       1       1       1
 ```
 
 ## 心理ネットワーク分析
@@ -33,13 +52,21 @@ head(data_shaps)
 Gaussian Graphical Model(GGM)を用いてSHAPSの心理ネットワークモデルを推定した。その際に，LASSO(least absolute shrinkage and selection operator)の一種のGraphical LASSOを用いている。GLASSOはネットワークのエッジの推定において，影響力が弱い変数の影響をゼロに近づけるようにすることで不要なエッジを除くことができる。GLASSOのパラメータ調整ではEBICを使う。
 
 
-```{r}
+
+```r
 results_shaps <-  estimateNetwork(data_shaps,default = "EBICglasso")
+```
+
+```
+## Estimating Network. Using package::function:
+##   - qgraph::EBICglasso for EBIC model selection
+##     - using glasso::glasso
 ```
 
 推定したSHAPSの心理ネットワークをプロットする。
 
-```{r}
+
+```r
 plot(results_shaps, 
      layout = "spring",
      labels = TRUE,
@@ -59,15 +86,24 @@ plot(results_shaps,
                    "Receiving praise"))
 ```
 
+![](analysis01_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+
 
 ### 中心性の指標
 
 推定したSHAPSの心理ネットワークをもとに中心性の指標(Strength)をプロットする。極端に項目１の影響が弱いことが示されている。
 
 
-```{r}
+
+```r
 centralityPlot(results_shaps)
 ```
+
+```
+## Note: z-scores are shown on x-axis rather than raw centrality indices.
+```
+
+![](analysis01_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 ## 引用文献
 
