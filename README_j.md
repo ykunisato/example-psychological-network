@@ -8,7 +8,7 @@
 
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
-"Kunisato Y. (2021). A example of psychological network of anhedonia (version 1.1.0). DOI: https://doi.org/10.5281/zenodo.5519884"を引用ください。
+"Kunisato Y. (2021). A example of psychological network of anhedonia (version 1.1.0). DOI: https://doi.org/10.5281/zenodo.5524196"を引用ください。
 
 ### DOI
 
